@@ -42,7 +42,16 @@ functions:
     events:
       - http:
           path: usuario
-          method: post
+          method: get
+          Content-Type: application/json
+          cors: true
+  # Listar usuarios
+  listarUsuarios:
+    handler: handler.listarUsuarios
+    events:
+      - http:
+          path: usuario
+          method: get
           Content-Type: application/json
           cors: true
 
